@@ -1,3 +1,8 @@
+/*Added white color variable */
+:root{
+    --white:white;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -42,7 +47,7 @@ body {
 }
 
 a {
-    color: #ffffff;
+    color:var(--white);
     text-decoration: none;
 }
 
@@ -84,21 +89,22 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
+    flex-wrap:wrap;
 }
 
 .benefit-lead {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .benefit-brand {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .benefit-cost {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .benefit-lead h3 {
@@ -140,7 +146,8 @@ p {
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    color: #ffffff;
+    color: var(--white);
+    overflow-x: scroll;
 }
 /* Rearranged images to relevant sections */
 .search-engine-optimization img {
@@ -152,18 +159,21 @@ p {
     font-size: 36px;
 }
 
+/*Formatted semantically, included overflow scroll to reduce box-breaking */
 .online-reputation-management {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    color: #ffffff;
+    color: var(--white);
+    overflow-x: scroll;
 }
 
 .online-reputation-management img {
     max-height: 200px;
 }
+
 
 .social-media-marketing {
     margin-bottom: 20px;
@@ -171,7 +181,8 @@ p {
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    color: #ffffff;
+    color: var(--white);
+    overflow-x: scroll;
 }
 
 .social-media-marketing img {
@@ -193,3 +204,17 @@ p {
 .footer h2 {
     font-size: 20px;
 }
+
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+    
+  }
+  
+  /* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+  @media screen and (max-width: 768px) {
+    .card {
+      width:100%;
+    }
+  }
